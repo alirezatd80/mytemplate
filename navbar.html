@@ -12,6 +12,7 @@
 
    <!--=============== CSS ===============-->
    <link rel="stylesheet" href="navbar/css/styles.css">
+   <link rel="stylesheet" href="/slidebar/style.css">
 
    <title>title FitBook</title>
 </head>
@@ -63,9 +64,8 @@
          </div>
       </nav>
    </header>
-
-   <!--==================== SEARCH ====================-->
-   <div class="search" id="search">
+    <!--==================== SEARCH ====================-->
+    <div class="search" id="search">
       <form action="/navbar.html" class="search__form" method="">
          <button type="submit"><i class="ri-search-line search__icon"></i></button>
          <input type="search" placeholder="اسم باشگاه یا سالن ورزشی رو بگو" class="search__input">
@@ -74,14 +74,41 @@
       <i class="ri-close-line search__close" id="search-close"></i>
    </div>
 
-
    <!--==================== MAIN ====================-->
    <main class="main">
       <img src="navbar/img/bg-image.jpeg" alt="image" class="main__bg">
    </main>
 
+   <!--==================== SLIDER ====================-->
+
+   <!--==================== best gyms ====================-->
+
+   <!--==================== why fitbook ====================-->
+
+   <!--==================== footer ====================-->
+  
+
+  
+
+
+   
    <!--=============== MAIN JS ===============-->
    <script src="navbar/js/main.js"></script>
+   <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const slides = document.querySelectorAll(".CSSgal > s");
+        const totalSlides = slides.length;
+        let currentIndex = 0;
+  
+        function showNextSlide() {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          window.location.hash = slides[currentIndex].id;
+        }
+  
+        setInterval(showNextSlide, 3000);
+      });
+    </script>
+
 </body>
 
 </html>
