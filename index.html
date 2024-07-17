@@ -11,6 +11,7 @@
       type="text/css" />
    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+   <link href="search_box/css/main.css" rel="stylesheet" />
 
 
 
@@ -79,8 +80,6 @@
       <i class="ri-close-line search__close" id="search-close"></i>
    </div>
 
-
-
    <!--==================== SLIDESHOW ====================-->
    <div id="carouselExampleDark" class="carousel carousel-dark slide " style="margin-top: 2rem; ">
       
@@ -108,12 +107,76 @@
       </button>
    </div>
 
-   <!--==================== MAIN ====================-->
+   <!--==================== SEARCH BOX ====================-->
+   <div class="s009 shadow">
+      <form>
+        <div class="inner-form">
+          <div class="basic-search">
+            <div class="input-field">
+              <input class="disabled" id="search" type="text" placeholder="نام سالن را وارد کنید" />
+              <div class="icon-wrap">
+               <i class="ri-search-line nav__search" style="font-size: 2rem; margin-right: 2rem; font-weight: 900;" id="search-btn"></i>
+              </div>
+            </div>
+          </div>
+          <div class="advance-search">
+            <span class="desc">جستجوی سانس خالی </span>
+            <div class="row">
+              <div class="input-field">
+                <div class="input-select">
+                  <select data-trigger="" name="choices-single-defaul">
+                    <option placeholder="" value="">روز هفته</option>
+                    <option>یکشنبه</option>
+                    <option>دوشنبه</option>
+                    <option>شنبه</option>
+                    <option>جمعه</option>
+                    <option>سه شنبه</option>
+                    <option>چهارشنبه</option>
+                    <option>پنج شنبه</option>
 
-   <div>
-      <h1 style="margin: 10rem;">hi</h1>
-   </div>
 
+                  </select>
+                </div>
+              </div>
+              <div class="input-field">
+                <div class="input-select">
+                  <select data-trigger="" name="choices-single-defaul">
+                    <option placeholder="" value="">ساعت مورد نظر</option>
+                    <option>8-12</option>
+                    <option>12-18</option>
+                    <option>18-24</option>
+                    <option>24-...</option>
+
+                  </select>
+                </div>
+              </div>
+              <div class="input-field">
+                <div class="input-select">
+                  <select data-trigger="" name="choices-single-defaul">
+                    <option placeholder="" value="">نوع مجموعه</option>
+                    <option>سالن چند منظوره</option>
+                    <option>زمین جمن مصنوعی</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row third">
+              <div class="input-field">
+                <div class="result-count">
+                  تعداد نتایج : <span>108</span></div>
+                <div class="group-btn">
+                  <button class="btn-delete" id="delete">پاک کردن</button>
+                  <button class="btn-search">جستجو</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!--==================== MAIN ====================-->
 
    <!--==================== SLIDER ====================-->
 
@@ -145,6 +208,27 @@
 
          setInterval(showNextSlide, 3000);
       });
+   </script>
+   <script src="search_box/js/extention/choices.js"></script>
+   <script>
+     const customSelects = document.querySelectorAll("select");
+     const deleteBtn = document.getElementById('delete')
+     const choices = new Choices('select',
+     {
+       searchEnabled: false,
+       itemSelectText: '',
+       removeItemButton: true,
+     });
+     deleteBtn.addEventListener("click", function(e)
+     {
+       e.preventDefault()
+       const deleteAll = document.querySelectorAll('.choices__button')
+       for (let i = 0; i < deleteAll.length; i++)
+       {
+         deleteAll[i].click();
+       }
+     });
+
    </script>
 
 </body>
