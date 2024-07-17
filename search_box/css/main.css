@@ -829,7 +829,7 @@ legend {
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #ffffff;
+  background:transparent  ;
   padding: 15px;
   font-family: 'Lato', sans-serif;
 
@@ -892,7 +892,7 @@ legend {
   min-width: 100px;
   height: 40px;
   padding: 0 15px;
-  background: #3b57e3;
+  background: #202021;
   white-space: nowrap;
   border-radius: 0;
   font-size: 14px;

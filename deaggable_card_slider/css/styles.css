@@ -31,7 +31,7 @@
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: transparent;
   color: var(--white-color);
 }
 
@@ -48,23 +48,23 @@ img {
 /*=============== CARD ===============*/
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+
+
 }
 
 .card__container {
-  padding-block: 5rem;
+  padding: 1rem;
 }
 
 .card__content {
-  margin-inline: 1.75rem;
-  border-radius: 1.25rem;
+  margin-inline: 1rem;
+  border-radius: 1rem;
   overflow: hidden;
 }
 
 .card__article {
-  width: 300px; /* Remove after adding swiper js */
+  width: 300px;
+  /* Remove after adding swiper js */
   border-radius: 1.25rem;
   overflow: hidden;
 }
@@ -77,7 +77,7 @@ img {
 }
 
 .card__data {
-  background-color: var(--container-color);
+  background-color: transparent;
   padding: 1.5rem 2rem;
   border-radius: 1rem;
   text-align: center;
@@ -186,6 +186,7 @@ img {
   .swiper-button-prev {
     left: -1rem;
   }
+
   .swiper-button-next {
     right: -1rem;
   }
