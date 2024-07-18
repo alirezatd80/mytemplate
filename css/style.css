@@ -1,0 +1,16 @@
+.temp-photo {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+
+  
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+ 
